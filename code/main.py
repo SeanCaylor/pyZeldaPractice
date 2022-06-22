@@ -4,12 +4,10 @@ from level import Level
 
 class Game:
     def __init__(self):
-        # general setup
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption('pyZelda')
         self.clock = pygame.time.Clock()
-
         self.level = Level()
 
     def run(self):
@@ -18,7 +16,6 @@ class Game:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
-
             self.screen.fill('black')
             self.level.run()
             pygame.display.update()
